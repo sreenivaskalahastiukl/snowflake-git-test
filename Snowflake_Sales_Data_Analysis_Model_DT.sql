@@ -295,8 +295,8 @@ ALTER TABLE Buyer MODIFY COLUMN Email SET TAG PII = 'Email';
 ALTER TABLE Buyer MODIFY COLUMN Address SET TAG PII = 'Address';
 
 
--- Client Table: Should FAIL. Missing Column
-ALTER TABLE Client MODIFY COLUMN Address SET TAG PII = 'Address';
+-- Buyer Table: Should FAIL. Missing Column
+--ALTER TABLE Buyer MODIFY COLUMN Address SET TAG PII = 'Address';
 
 -- Opportunities Table: Should FAIL. Invalid Tag Values. 
 ALTER TABLE Opportunities MODIFY COLUMN LeadSource SET TAG Lead_Source = 'LeadSource';
@@ -357,7 +357,7 @@ GRANT SELECT ON ALL TABLES IN SCHEMA custs TO ROLE SalesManager; -- More access
 USE ROLE ACCOUNTADMIN;
 
 -- Grant the SalesRep role to the Fru user (Admin)
-GRANT ROLE SalesManager TO USER Fru;
+GRANT ROLE SalesManager TO USER sreenivaskalahasti;
 
 -- Grant the SalesRep role to the Demo user
 GRANT ROLE SalesRep TO USER Demo;
