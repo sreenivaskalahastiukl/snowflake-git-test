@@ -299,8 +299,8 @@ ALTER TABLE Buyer MODIFY COLUMN Address SET TAG PII = 'Address';
 --ALTER TABLE Buyer MODIFY COLUMN Address SET TAG PII = 'Address';
 
 -- Opportunities Table: Should FAIL. Invalid Tag Values. 
-ALTER TABLE Opportunities MODIFY COLUMN LeadSource SET TAG Lead_Source = 'LeadSource';
-ALTER TABLE Opportunities MODIFY COLUMN SalesStage SET TAG Sales_Stage = 'SalesStage';
+ALTER TABLE Opportunities MODIFY COLUMN LeadSource SET TAG Lead_Source = 'Partner Referral';
+ALTER TABLE Opportunities MODIFY COLUMN SalesStage SET TAG Sales_Stage = 'Qualification';
 
 
 -- +----------------------------------------------------+
